@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--home-->
+
+  <title>Christina A. Johnson</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 75px;
+    }
+
+    h2 {
+      font-size: 55px;
+      margin-top: 100px;
+      z-index: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link,
+    a:visited {
+      color: black;
+    }
+
+    a:hover {
+      color: red;
+      cursor: pointer;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    #contact {
+      position: relative;
+      text-decoration: underline;
+      z-index: 0;
+    }
+
+    table {
+      text-align: center;
+      margin: 0;
+      border-spacing: 0;
+    }
+
+    td {
+      padding: 10px;
+      font-size: 28px;
+      border: 2px solid black;
+      border-top-width: 0;
+    }
+
+    th {
+      font-weight: bold;
+      font-size: 35px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      position: relative;
+      background-color: black;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      height: 55px;
+      align-items: flex-start;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    th.langhead,
+    th.techhead {
+      position: relative;
+      height: 55px;
+      z-index: 1;
+    }
+
+    td {
+      display: none;
+      z-index: 1;
+    }
+
+    .langcont:hover,
+    .techcont:hover {
+      td {
+        position: relative;
+        display: inline-block;
+        color: black;
+        background-color: rgba(255, 255, 255, 1);
+        width: 125px;
+        z-index: 1;
+        opacity: 1;
+        cursor: default;
+      }
+    }
+  </style>
+
+  <script>
+
+    function toggleMenu() {
+      let menu = document.getElementsByTagName("td");
+      if (menu.style.display == "inline-block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "inline-block";
+      }
+    }
+
+    /*function menu() {
+      let i = 0;
+      if (i === 0) {
+        document.getElementsByTagName("td").style.display = "inline-block";
+        i++;
+      }
+      else if (i === 1) {
+        document.getElementsByTagName("td").style.display = "none";
+        i = 0;
+      }
+    }*/
+  </script>
+</head>
+
+<body>
+  <div class="name">
+    <h1>Christina A. Johnson</h1>
+  </div>
+  <div class="navbar">
+    <div class="langcont">
+      <table id="langtable">
+        <tr>
+          <th class="langhead" onclick="toggleMenu()">Languages</th>
+        </tr>
+        <tr>
+          <td id="French"><a href="https://french.christinaajohnson.com" title="French">French</a></td>
+        </tr>
+        <tr>
+          <td id="Spanish"><a href="https://spanish.christinaajohnson.com" title="Spanish">Spanish</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="techcont">
+      <table id="techtable">
+        <tr>
+          <th class="techhead" onclick="toggleMenu()">Technology</th>
+        </tr>
+    </div>
+    <tr>
+      <td id="HTML"><a href="https://html.christinaajohnson.com" title="HTML">HTML</a></td>
+    </tr>
+    <tr>
+      <td id="CSS"><a href="https://css.christinaajohnson.com" title="CSS">CSS</a></td>
+    </tr>
+    <tr>
+      <td id="JavaScript"><a href="https://javascript.christinaajohnson.com" title="JavaScript">JavaScript</a></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+
+  <h2><a href="https://contact.christinaajohnson.com" id="contact" title="Contact">Contact</a></h2>
+
+</body>
+
+</html>
